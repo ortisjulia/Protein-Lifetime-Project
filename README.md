@@ -7,6 +7,10 @@ The N-end rule was first described by Alexander Varshavsky and his team in the n
 ## Code
 This code was developed using Python3 version 3.8 using Spyder version 4.2.3, which is a Python development environment. Spyder can be downloaded using the cross-platform Anaconda distribution.
 
+### Anaconda
+
+In order to download Anaconda and, therefore, Spyder, you can go to the Anaconda website and follow their [installation protocol](https://docs.anaconda.com/anaconda/install/).
+
 ### Python Modules
 Before using this script it is recommended to install the following Python modules:
 
