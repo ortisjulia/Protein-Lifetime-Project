@@ -31,3 +31,7 @@ When all the information is inputed you can press the submit button. A new windo
 ![ProteinLifetimeResults](https://user-images.githubusercontent.com/70640998/110923837-9f050d80-8321-11eb-9e95-ca51455c8d9e.jpg)
 
 **Figure 2.** Example of an output window. This window contains the results of the protein lifetime analysis. In this case, it tells the user the protein lifetime and also outputs the protein sequence.
+
+## Examples
+
+In this repository, you can find a folder named Examples, with several data files and well explained examples to learn how to use this tool with all possible inputs and the expected outputs that will be generated.
