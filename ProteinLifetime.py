@@ -147,7 +147,7 @@ if values[0] == True and values[3] == True:
         if key == last_aminoacid: #if the key is the same as the last_aminoacid
             time = value * 2 #I multiply the value in the dictionary by 2 because it is the half-life and I want the full degradation time
             protein_sequence = "".join(aminoacid_list) #Join the amino_acid list and assign it to a variable called protein_sequence
-            sg.popup('PROTEIN LIFETIME', 'This protein lifetime is ' + str(time) + ' hours', 'The protein sequence is:' + "\n" + protein_sequence) #In a pop up window print the protein lifetime and the protein sequence as the output of the analysis
+            sg.popup('PROTEIN LIFETIME', 'This protein half-life is ' + str(value) + ' hours.', 'This protein lifetime in the cell is ' + str(time) + ' hours.', 'The protein sequence is:' + "\n" + protein_sequence) #In a pop up window print the protein lifetime and the protein sequence as the output of the analysis
         else: #If the last_aminoacid is not the same as the key, do nothing
             pass
 
@@ -163,7 +163,7 @@ if values[0] == True and values[4] == True:
         if key == last_aminoacid: #If the dictionary key is the same as the last_aminoacid
             time = value * 2 #I multiply the value in the dictionary by 2 because it is the half-life and I want the full degradation time
             protein_sequence = translated #Assigned the translated variable data to protein_sequence variable
-            sg.popup('PROTEIN LIFETIME', 'This protein lifetime is ' + str(time) + ' hours', 'The protein sequence is:' + '\n' + protein_sequence) #In a pop up window print the protein lifetime and the protein sequence as the output of the analysis
+            sg.popup('PROTEIN LIFETIME', 'This protein half-life is ' + str(value) + ' hours.', 'This protein lifetime in the cell is ' + str(time) + ' hours.', 'The protein sequence is:' + "\n" + protein_sequence) #In a pop up window print the protein lifetime and the protein sequence as the output of the analysis
         else: #If the last_aminoacid is not the same as the key, do nothing
             pass
 
@@ -173,7 +173,7 @@ if values[0] == True and values[5] == True:
         if key == last_aminoacid: #If the key is the same as the last_aminoacid
             time = value * 2 #I multiply the value in the dictionary by 2 because it is the half-life and I want the full degradation time
             protein_sequence = "".join(aminoacid_list) #Join the amino_acid list and assign it to a variable called protein_sequence
-            sg.popup('PROTEIN LIFETIME', 'This protein lifetime is ' + str(time) + ' hours', 'The Uniprot information about the protein sequence is:', pSeq) #In a pop up window print the protein lifetime and the information retrieved in the Uniprot webpage using the input Uniprot accession number
+            sg.popup('PROTEIN LIFETIME', 'This protein half-life is ' + str(value) + ' hours.', 'This protein lifetime in the cellNo docu is ' + str(time) + ' hours.', 'The Uniprot information about the protein sequence is:', pSeq) #In a pop up window print the protein lifetime and the information retrieved in the Uniprot webpage using the input Uniprot accession number
         else: #If the last_aminoacid is not the same as the key, do nothing
             pass
     
@@ -186,9 +186,10 @@ if values[1] == True and values[3] == True:
             protein_sequence = "".join(aminoacid_list) #Join the amino_acid list and assign it to a variable called protein_sequence
             if time > 60: #If the variable time is bigger than 60
                 time = time/60 #Divide the variable time by 60 to transform minutes to hours
-                sg.popup('PROTEIN LIFETIME', 'This protein lifetime is ' + str(time) + ' hours', 'The protein sequence is:' + '\n' + protein_sequence) #In a pop up window print the protein lifetime and the protein sequence as the output of the analysis
+                value = value/60 #Divide the variable value by 60 to transform minutes to hours
+                sg.popup('PROTEIN LIFETIME', 'This protein half-life is ' + str(value) + ' hours.', 'This protein lifetime in the cell is ' + str(time) + ' hours.', 'The protein sequence is:' + '\n' + protein_sequence) #In a pop up window print the protein lifetime and the protein sequence as the output of the analysis
             else: #If the time is less than 60, leave the time units in minutes
-                sg.popup('PROTEIN LIFETIME', 'This protein lifetime is ' + str(time) + ' minutes', 'The protein sequence is:' + '\n' + protein_sequence) #In a pop up window print the protein lifetime and the protein sequence as the output of the analysis
+                sg.popup('PROTEIN LIFETIME', 'This protein half-life is ' + str(value) + ' minutes.', 'This protein lifetime in the cell is ' + str(time) + ' minutes.', 'The protein sequence is:' + '\n' + protein_sequence) #In a pop up window print the protein lifetime and the protein sequence as the output of the analysis
         else: #If the last_aminoacid is not the same as the key, do nothing
             pass
 
@@ -206,9 +207,10 @@ if values[1] == True and values[4] == True:
             protein_sequence = translated #Assign the translated variable to the protein_sequence variable
             if time > 60: #If the variable time is bigger than 60
                 time = time/60 #Divide the variable time by 60 to transform minutes to hours
-                sg.popup('PROTEIN LIFETIME', 'This protein lifetime is ' + str(time) + ' hours', 'The protein sequence is:' + '\n' + protein_sequence) #In a pop up window print the protein lifetime and the protein sequence as the output of the analysis
+                value = value/60 #Divide the variable value by 60 to transform minutes to hours
+                sg.popup('PROTEIN LIFETIME', 'This protein half-life is ' + str(value) + ' hours.', 'This protein lifetime in the cell is ' + str(time) + ' hours.', 'The protein sequence is:' + '\n' + protein_sequence) #In a pop up window print the protein lifetime and the protein sequence as the output of the analysis
             else: #If the time is less than 60, leave the time units in minutes
-                sg.popup('PROTEIN LIFETIME', 'This protein lifetime is ' + str(time) + ' minutes', 'The protein sequence is:' + '\n' + protein_sequence) #In a pop up window print the protein lifetime and the protein sequence as the output of the analysis
+                sg.popup('PROTEIN LIFETIME', 'This protein half-life is ' + str(value) + ' minutes.', 'This protein lifetime in the cell is ' + str(time) + ' minutes.', 'The protein sequence is:' + '\n' + protein_sequence) #In a pop up window print the protein lifetime and the protein sequence as the output of the analysis
         else: #If the last_aminoacid is not the same as the key, do nothing
             pass
 
@@ -220,9 +222,10 @@ if values[1] == True and values[5] == True:
             protein_sequence = "".join(aminoacid_list) #Join the amino_acid list and assign it to a variable called protein_sequence
             if time > 60: #If the variable time is bigger than 60
                 time = time/60 #Divide the variable time by 60 to transform minutes to hours
-                sg.popup('PROTEIN LIFETIME', 'This protein lifetime is ' + str(time) + ' hours', 'The Uniprot information about the protein sequence is:', pSeq) #In a pop up window print the protein lifetime and the information retrieved in the Uniprot webpage using the input Uniprot accession number
+                value = value/60 #Divide the variable value by 60 to transform minutes to hours
+                sg.popup('PROTEIN LIFETIME', 'This protein half-life is ' + str(value) + ' hours.', 'This protein lifetime in the cell is ' + str(time) + ' hours.', 'The Uniprot information about the protein sequence is:', pSeq) #In a pop up window print the protein lifetime and the information retrieved in the Uniprot webpage using the input Uniprot accession number
             else: #If the time is less than 60, leave the time units in minutes
-                sg.popup('PROTEIN LIFETIME', 'This protein lifetime is ' + str(time) + ' minutes', 'The Uniprot information about the protein sequence is:', pSeq) #In a pop up window print the protein lifetime and the information retrieved in the Uniprot webpage using the input Uniprot accession number
+                sg.popup('PROTEIN LIFETIME', 'This protein half-life is ' + str(value) + ' minutes.', 'This protein lifetime in the cell is ' + str(time) + ' minutes.', 'The Uniprot information about the protein sequence is:', pSeq) #In a pop up window print the protein lifetime and the information retrieved in the Uniprot webpage using the input Uniprot accession number
         else: #If the last_aminoacid is not the same as the key, do nothing
             pass
 
@@ -234,9 +237,10 @@ if values[2] == True and values[3] == True:
             protein_sequence = "".join(aminoacid_list) #Join the amino_acid list and assign it to a variable called protein_sequence
             if time > 60: #If the variable time is bigger than 60
                 time = time/60 #Divide the variable time by 60 to transform minutes to hours
-                sg.popup('PROTEIN LIFETIME', 'This protein lifetime is ' + str(time) + ' hours', 'The protein sequence is:' + '\n' + protein_sequence) #In a pop up window print the protein lifetime and the protein sequence as the output of the analysis
+                value = value/60 #Divide the variable value by 60 to transform minutes to hours
+                sg.popup('PROTEIN LIFETIME', 'This protein half-life is ' + str(value) + ' hours.', 'This protein lifetime in the cell is ' + str(time) + ' hours.', 'The protein sequence is:' + '\n' + protein_sequence) #In a pop up window print the protein lifetime and the protein sequence as the output of the analysis
             else: #If the time is less than 60, leave the time units in minutes
-                sg.popup('PROTEIN LIFETIME', 'This protein lifetime is ' + str(time) + ' minutes', 'The protein sequence is:' + '\n' + protein_sequence) #In a pop up window print the protein lifetime and the protein sequence as the output of the analysis
+                sg.popup('PROTEIN LIFETIME', 'This protein half-life is ' + str(value) + ' minutes.', 'This protein lifetime in the cell is ' + str(time) + ' minutes.', 'The protein sequence is:' + '\n' + protein_sequence) #In a pop up window print the protein lifetime and the protein sequence as the output of the analysis
         else: #If the last_aminoacid is not the same as the key, do nothing
             pass
 
@@ -254,9 +258,10 @@ if values[2] == True and values[4] == True:
             protein_sequence = translated #Assign the translated variable to the protein_sequence variable
             if time > 60: #If the variable time is bigger than 60
                 time = time/60 #Divide the variable time by 60 to transform minutes to hours
-                sg.popup('PROTEIN LIFETIME', 'This protein lifetime is ' + str(time) + ' hours', 'The protein sequence is:' + '\n' + protein_sequence) #In a pop up window print the protein lifetime and the protein sequence as the output of the analysis
+                value = value/60 #Divide the variable value by 60 to transform minutes to hours
+                sg.popup('PROTEIN LIFETIME', 'This protein half-life is ' + str(value) + ' hours.', 'This protein lifetime in the cell is ' + str(time) + ' hours.', 'The protein sequence is:' + '\n' + protein_sequence) #In a pop up window print the protein lifetime and the protein sequence as the output of the analysis
             else: #If the time is less than 60, leave the time units in minutes
-                sg.popup('PROTEIN LIFETIME', 'This protein lifetime is ' + str(time) + ' minutes', 'The protein sequence is:' + '\n' + protein_sequence) #In a pop up window print the protein lifetime and the protein sequence as the output of the analysis
+                sg.popup('PROTEIN LIFETIME', 'This protein half-life is ' + str(value) + ' minutes.', 'This protein lifetime in the cell is ' + str(time) + ' minutes.', 'The protein sequence is:' + '\n' + protein_sequence) #In a pop up window print the protein lifetime and the protein sequence as the output of the analysis
         else: #If the last_aminoacid is not the same as the key, do nothing
             pass
 
@@ -268,8 +273,9 @@ if values[2] == True and values[5] == True:
             protein_sequence = "".join(aminoacid_list) #Join the amino_acid list and assign it to a variable called protein_sequence
             if time > 60: #If the variable time is bigger than 60
                 time = time/60 #Divide the variable time by 60 to transform minutes to hours
-                sg.popup('PROTEIN LIFETIME', 'This protein lifetime is ' + str(time) + ' hours', 'The Uniprot information about the protein sequence is:', pSeq) #In a pop up window print the protein lifetime and the information retrieved in the Uniprot webpage using the input Uniprot accession number
+                value = value/60 #Divide the variable value by 60 to transform minutes to hours
+                sg.popup('PROTEIN LIFETIME', 'This protein half-life is ' + str(value) + ' hours.', 'This protein lifetime in the cell is ' + str(time) + ' hours.', 'The Uniprot information about the protein sequence is:', pSeq) #In a pop up window print the protein lifetime and the information retrieved in the Uniprot webpage using the input Uniprot accession number
             else: #If the time is less than 60, leave the time units in minutes
-                sg.popup('PROTEIN LIFETIME', 'This protein lifetime is ' + str(time) + ' minutes', 'The Uniprot information about the protein sequence is:', pSeq) #In a pop up window print the protein lifetime and the information retrieved in the Uniprot webpage using the input Uniprot accession number
+                sg.popup('PROTEIN LIFETIME', 'This protein half-life is ' + str(value) + ' minutes.', 'This protein lifetime in the cell is ' + str(time) + ' minutes.', 'The Uniprot information about the protein sequence is:', pSeq) #In a pop up window print the protein lifetime and the information retrieved in the Uniprot webpage using the input Uniprot accession number
         else: #If the last_aminoacid is not the same as the key, do nothing
             pass
