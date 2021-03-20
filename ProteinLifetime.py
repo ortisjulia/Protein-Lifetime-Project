@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 '''
     Title: ProteinLifetime.py
-    Date: 2021-03-12
+    Date: 2021-03-20
     Author: Julia Ortis Sunyer
     Description:
         This program will calculate the protein lifetime in the cell by the N-end rule described
@@ -229,7 +229,7 @@ if values[1] == True and values[5] == True:
         else: #If the last_aminoacid is not the same as the key, do nothing
             pass
 
-#Code if option 2 is chosen, which is that the organism is a fungi and option 3 is chosen, which is a protein sequence
+#Code if option 2 is chosen, which is that the organism is a yeast and option 3 is chosen, which is a protein sequence
 if values[2] == True and values[3] == True:
     for key,value in yeast_dict.items(): #Go through the keys and values in the yeast_dict dictionary
         if key == last_aminoacid: #If the key and the last_aminoacid are the same
@@ -244,7 +244,7 @@ if values[2] == True and values[3] == True:
         else: #If the last_aminoacid is not the same as the key, do nothing
             pass
 
-#Code if option 2 is chosen, which is that the organism is a fungi and option 4 is chosen, which is a nucleotide sequence
+#Code if option 2 is chosen, which is that the organism is a yeast and option 4 is chosen, which is a nucleotide sequence
 if values[2] == True and values[4] == True:
     coding_dna = "".join(aminoacid_list) #Join the elements in the aminoacid_list and assign them to the variable coding_dna
     coding_dna = Seq(coding_dna) #To be able to use the coding_dna variable in biopython as a string with biological methods
@@ -265,7 +265,7 @@ if values[2] == True and values[4] == True:
         else: #If the last_aminoacid is not the same as the key, do nothing
             pass
 
-#Code if option 2 is chosen, which is that the organism is a fungi and option 5 is chosen, which is a uniprot accession number
+#Code if option 2 is chosen, which is that the organism is a yeast and option 5 is chosen, which is a uniprot accession number
 if values[2] == True and values[5] == True:
     for key,value in yeast_dict.items(): #Go through the keys and values in the yeast_dict dictionary
         if key == last_aminoacid: #If the key and the last_aminoacid are the same
