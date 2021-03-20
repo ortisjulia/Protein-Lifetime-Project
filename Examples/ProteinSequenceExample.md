@@ -4,7 +4,7 @@ In this markdown file, I am going to explain several examples on the possible op
 
 ## Step 1
 
-Open Spyder (or any other Python IDE) and run the script. This will cause a graphical user interface window to pop up. The window will look similar to the one shown in figure 1.
+Open Spyder (or any other Python IDE) and run the script. Alternatively you can also run the script from the command line using: `python ProteinLifetime.py`. This will cause a graphical user interface window to pop up. The window will look similar to the one shown in figure 1.
 
 ![ProteinLifetime](https://user-images.githubusercontent.com/70640998/111024653-3fba0280-83e0-11eb-858e-6c485913f7b5.jpg)
 
